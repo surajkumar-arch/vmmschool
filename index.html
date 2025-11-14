@@ -3,15 +3,15 @@
 <head>
     <meta charset="utf-8">
     <title>VMM International School - Motihari</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="description" content="VMM International School, Motihari. Admission Open for Nursery to VIII. Smart Classes, Library, Computer Lab, Dance, Music & Playground. English Medium School.">
-    <meta name="keywords" content="VMM School Motihari, Best School in Motihari, VMM International School Admission, English Medium School Bihar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Font Awesome -->
+    <!-- SEO -->
+    <meta name="description" content="VMM International School, Motihari, Bihar. Admission Open for Nursery to Class XII. Smart Classes, Library, Computer Lab, Dance, Music & Playground. English Medium School.">
+    <meta name="keywords" content="VMM School Motihari, Best School in Motihari, English Medium School, VMM International School">
+
+    <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
 
     <style>
 
@@ -21,7 +21,6 @@
             --bg: #f4f7fb;
             --muted: #6b7280;
         }
-
         body{
             margin:0;
             font-family:'Inter', sans-serif;
@@ -29,28 +28,28 @@
             color:#111;
         }
 
-        /* ------------------------------------------ */
+        /* ============================== */
         /* HEADER */
-        /* ------------------------------------------ */
+        /* ============================== */
 
         header.header{
             background:var(--navy);
             color:white;
             display:flex;
             align-items:center;
-            padding:12px 20px;
+            padding:14px 20px;
             justify-content:space-between;
             position:sticky;
             top:0;
             z-index:50;
-            box-shadow:0 4px 18px rgba(0,0,0,0.1);
+            box-shadow:0 4px 18px rgba(0,0,0,0.15);
         }
 
         .header-left img{
-            height:56px;
-            background:#fff;
-            padding:4px;
-            border-radius:6px;
+            height:64px;
+            background:white;
+            padding:5px;
+            border-radius:8px;
         }
 
         .header-center{
@@ -60,14 +59,17 @@
 
         .header-center h1{
             margin:0;
-            font-size:20px;
-            font-weight:800;
+            font-size:34px;
+            font-weight:900;
+            letter-spacing:1px;
+            color:white;
+            text-transform:uppercase;
         }
 
         .header-center p{
             margin:0;
             font-size:13px;
-            color:#dce3f7;
+            color:#d7e0fb;
         }
 
         .header-right{
@@ -76,54 +78,61 @@
             gap:10px;
         }
 
-        .btn{
-            background:var(--accent);
-            padding:8px 14px;
-            border-radius:8px;
-            color:white;
-            text-decoration:none;
-            font-weight:600;
-            display:flex;
-            align-items:center;
-            gap:6px;
-            font-size:14px;
-        }
-
         nav.navbar ul{
             display:flex;
-            gap:16px;
             list-style:none;
             padding:0;
             margin:0;
+            gap:14px;
+        }
+        nav.navbar a{
+            color:white;
+            text-decoration:none;
+            font-weight:600;
         }
 
-        nav.navbar a{
+        /* BUTTON STYLE with Hover */
+        .btn{
+            background:var(--accent);
+            padding:10px 16px;
+            border-radius:10px;
+            color:white;
             text-decoration:none;
-            color:#fff;
-            font-size:14px;
-            padding:6px 10px;
+            font-weight:600;
+            font-size:15px;
+            display:flex;
+            align-items:center;
+            gap:6px;
+            transition:.25s ease;
+            box-shadow:0 5px 18px rgba(255,140,0,0.25);
+        }
+        .btn:hover{
+            transform:translateY(-4px) scale(1.06);
+            box-shadow:0 10px 26px rgba(255,140,0,0.40);
         }
 
         #menu-btn{
             display:none;
-            font-size:22px;
+            font-size:24px;
             cursor:pointer;
         }
 
-        /* ------------------------------------------ */
-        /* HERO SECTION */
-        /* ------------------------------------------ */
+
+        /* ============================== */
+        /* HERO */
+        /* ============================== */
 
         .hero{
             display:flex;
-            gap:30px;
+            gap:35px;
             padding:50px 6%;
-            background: linear-gradient(rgba(2,32,82,0.9), rgba(2,32,82,0.8)), url('images/home-img.png');
+            background: linear-gradient(rgba(2,32,82,0.92), rgba(2,32,82,0.80)),
+                        url('images/home-img.png');
             background-size:cover;
             background-position:center;
-            border-bottom-left-radius:18px;
-            border-bottom-right-radius:18px;
             color:white;
+            border-bottom-left-radius:20px;
+            border-bottom-right-radius:20px;
         }
 
         .hero-left{
@@ -131,15 +140,15 @@
         }
 
         .hero-left h1{
-            margin:0 0 10px;
-            font-size:44px;
-            font-weight:800;
+            margin:0 0 12px;
+            font-size:42px;
+            font-weight:900;
         }
 
         .hero-left p{
-            max-width:600px;
-            margin-bottom:18px;
+            margin-bottom:20px;
             line-height:1.6;
+            font-size:16px;
         }
 
         .hero-actions{
@@ -149,22 +158,22 @@
         }
 
         .hero-right{
-            width:300px;
-            background:rgba(255,255,255,0.09);
+            width:310px;
+            background:rgba(255,255,255,0.12);
             padding:18px;
             border-radius:12px;
             text-align:center;
+            box-shadow:0 10px 28px rgba(0,0,0,0.25);
         }
 
         .hero-right img{
             width:100%;
             border-radius:10px;
-            margin-bottom:10px;
         }
 
-        /* ------------------------------------------ */
+        /* ============================== */
         /* FACILITIES */
-        /* ------------------------------------------ */
+        /* ============================== */
 
         section.category{
             padding:40px 6%;
@@ -174,84 +183,58 @@
         }
 
         .category .box{
-            background:#fff;
-            padding:20px;
+            background:white;
             border-radius:12px;
+            padding:20px;
             text-align:center;
-            box-shadow:0 4px 16px rgba(0,0,0,0.05);
+            box-shadow:0 6px 16px rgba(0,0,0,0.08);
         }
-
         .category .box img{
             width:60px;
-            height:60px;
             margin-bottom:10px;
         }
 
-        /* ------------------------------------------ */
+        /* ============================== */
         /* FOOTER */
-        /* ------------------------------------------ */
+        /* ============================== */
 
         footer{
-            background:#fff;
-            padding:30px 6%;
+            padding:40px 6%;
+            background:white;
             margin-top:40px;
         }
-
-        footer .footer-grid{
+        .footer-grid{
             display:grid;
-            grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+            grid-template-columns:repeat(auto-fit, minmax(230px,1fr));
             gap:20px;
         }
-
         footer a{
-            text-decoration:none;
             color:var(--muted);
+            font-weight:600;
+            text-decoration:none;
             display:block;
             margin:6px 0;
-            font-weight:600;
         }
-
         .footer-bottom{
-            text-align:center;
             margin-top:20px;
+            text-align:center;
             font-size:14px;
-            color:var(--muted);
         }
 
-        /* ------------------------------------------ */
-        /* MOBILE FIXES (Your Code Added Here) */
-        /* ------------------------------------------ */
-        @media (max-width: 768px){
+        /* ============================== */
+        /* MOBILE FIXES */
+        /* ============================== */
+
+        @media(max-width:768px){
 
             header.header{
-                flex-direction: column;
-                padding: 10px 14px;
-                gap: 10px;
+                flex-direction:column;
                 text-align:center;
-            }
-
-            .header-left img{
-                height: 50px;
-                margin-bottom: 4px;
+                gap:10px;
             }
 
             .header-center h1{
-                font-size: 16px;
-            }
-            .header-center p{
-                font-size: 11px;
-            }
-
-            .header-right{
-                justify-content:center;
-                width:100%;
-                gap:10px;
-                flex-wrap:wrap;
-            }
-
-            .header-right .btn{
-                padding: 8px 14px;
-                font-size: 13px;
+                font-size:22px;
             }
 
             #menu-btn{
@@ -259,29 +242,35 @@
                 position:absolute;
                 right:16px;
                 top:14px;
+                color:white;
             }
 
             nav.navbar{
                 display:none;
-                width:100%;
             }
 
             nav.navbar ul{
                 flex-direction:column;
                 background:#022052;
-                padding:10px 0;
+                padding:10px;
                 border-radius:10px;
-                text-align:center;
+                margin-top:10px;
+            }
+
+            .header-right{
+                flex-wrap:wrap;
+                justify-content:center;
+                width:100%;
             }
 
             .hero{
-                padding-top:24px !important;
                 flex-direction:column;
                 text-align:center;
+                padding-top:28px !important;
             }
 
             .hero-left h1{
-                font-size:28px;
+                font-size:30px;
             }
 
             .hero-right{
@@ -297,15 +286,16 @@
     <!-- HEADER -->
     <header class="header">
         <div class="header-left">
-            <img src="images/logo.png" alt="">
+            <img src="images/logo.png" alt="School Logo">
         </div>
 
         <div class="header-center">
             <h1>VMM INTERNATIONAL SCHOOL</h1>
-            <p>Motihari, Bihar — Nursery to Class VIII</p>
+            <p>Motihari, Bihar — Nursery to Class XII</p>
         </div>
 
         <div class="header-right">
+
             <nav class="navbar">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
@@ -315,8 +305,14 @@
                 </ul>
             </nav>
 
-            <a class="btn" href="tel:+919717027791"><i class="fas fa-phone"></i> Call</a>
-            <a class="btn" href="https://maps.app.goo.gl/YQ7drw1g4xwhc6p99" target="_blank"><i class="fas fa-map-marker-alt"></i> Location</a>
+            <!-- FIXED CALL ICON -->
+            <a class="btn" href="tel:+919717027791">
+                <i class="fas fa-phone-alt"></i> Call
+            </a>
+
+            <a class="btn" href="https://maps.app.goo.gl/YQ7drw1g4xwhc6p99" target="_blank">
+                <i class="fas fa-map-marker-alt"></i> Location
+            </a>
 
             <div id="menu-btn" class="fas fa-bars"></div>
         </div>
@@ -325,14 +321,14 @@
     <!-- HERO -->
     <section class="hero">
         <div class="hero-left">
-            <h1>Admission Open — Nursery to Class VIII</h1>
+            <h1>Admission Open — Nursery to Class XII</h1>
             <p>
-                Classes • Library • Computer Lab • Dance • Music • Playground.  
-                Join VMM International School for a caring, high-quality English medium education in Motihari.
+                Smart Classes • Library • Computer Lab • Dance • Music • Playground.  
+                Join VMM International School for a caring, high-quality English–medium education in Motihari.
             </p>
 
             <div class="hero-actions">
-                <a class="btn" href="tel:+919717027791"><i class="fas fa-phone"></i> Apply Now</a>
+                <a class="btn" href="tel:+919717027791"><i class="fas fa-phone-alt"></i> Apply Now</a>
                 <a class="btn" href="https://wa.me/919717027791"><i class="fab fa-whatsapp"></i> WhatsApp</a>
             </div>
         </div>
@@ -340,7 +336,7 @@
         <div class="hero-right">
             <img src="images/school-photo.jpg" alt="">
             <h4>Visit Us</h4>
-            <p>Prajapati Chowk, Chhatauni — Motihari</p>
+            <p>Prajapati Chowk, Chhatauni — Motihari, Bihar 845401</p>
         </div>
     </section>
 
@@ -365,7 +361,7 @@
 
             <div>
                 <h3>Location</h3>
-                <p>Prajapati Chowk, Chhatauni — Motihari, Bihar</p>
+                <p>Prajapati Chowk, Chhatauni — Motihari, Bihar 845401</p>
             </div>
 
             <div>
@@ -375,7 +371,9 @@
             </div>
         </div>
 
-        <div class="footer-bottom">© VMM International School | All Rights Reserved</div>
+        <div class="footer-bottom">
+            © VMM International School — All Rights Reserved
+        </div>
     </footer>
 
 </body>
