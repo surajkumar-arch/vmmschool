@@ -1,380 +1,258 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>VMM International School - Motihari</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO -->
-    <meta name="description" content="VMM International School, Motihari, Bihar. Admission Open for Nursery to Class XII. Smart Classes, Library, Computer Lab, Dance, Music & Playground. English Medium School.">
-    <meta name="keywords" content="VMM School Motihari, Best School in Motihari, English Medium School, VMM International School">
-
-    <!-- Fonts & Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
-
-    <style>
-
-        :root{
-            --navy: #022052;
-            --accent: #ff8c00;
-            --bg: #f4f7fb;
-            --muted: #6b7280;
-        }
-        body{
-            margin:0;
-            font-family:'Inter', sans-serif;
-            background:var(--bg);
-            color:#111;
-        }
-
-        /* ============================== */
-        /* HEADER */
-        /* ============================== */
-
-        header.header{
-            background:var(--navy);
-            color:white;
-            display:flex;
-            align-items:center;
-            padding:14px 20px;
-            justify-content:space-between;
-            position:sticky;
-            top:0;
-            z-index:50;
-            box-shadow:0 4px 18px rgba(0,0,0,0.15);
-        }
-
-        .header-left img{
-            height:64px;
-            background:white;
-            padding:5px;
-            border-radius:8px;
-        }
-
-        .header-center{
-            flex:1;
-            text-align:center;
-        }
-
-        .header-center h1{
-            margin:0;
-            font-size:34px;
-            font-weight:900;
-            letter-spacing:1px;
-            color:white;
-            text-transform:uppercase;
-        }
-
-        .header-center p{
-            margin:0;
-            font-size:13px;
-            color:#d7e0fb;
-        }
-
-        .header-right{
-            display:flex;
-            align-items:center;
-            gap:10px;
-        }
-
-        nav.navbar ul{
-            display:flex;
-            list-style:none;
-            padding:0;
-            margin:0;
-            gap:14px;
-        }
-        nav.navbar a{
-            color:white;
-            text-decoration:none;
-            font-weight:600;
-        }
-
-        /* BUTTON STYLE with Hover */
-        .btn{
-            background:var(--accent);
-            padding:10px 16px;
-            border-radius:10px;
-            color:white;
-            text-decoration:none;
-            font-weight:600;
-            font-size:15px;
-            display:flex;
-            align-items:center;
-            gap:6px;
-            transition:.25s ease;
-            box-shadow:0 5px 18px rgba(255,140,0,0.25);
-        }
-        .btn:hover{
-            transform:translateY(-4px) scale(1.06);
-            box-shadow:0 10px 26px rgba(255,140,0,0.40);
-        }
-
-        #menu-btn{
-            display:none;
-            font-size:24px;
-            cursor:pointer;
-        }
-
-
-        /* ============================== */
-        /* HERO */
-        /* ============================== */
-
-        .hero{
-            display:flex;
-            gap:35px;
-            padding:50px 6%;
-            background: linear-gradient(rgba(2,32,82,0.92), rgba(2,32,82,0.80)),
-                        url('images/home-img.png');
-            background-size:cover;
-            background-position:center;
-            color:white;
-            border-bottom-left-radius:20px;
-            border-bottom-right-radius:20px;
-        }
-
-        .hero-left{
-            flex:1;
-        }
-
-        .hero-left h1{
-            margin:0 0 12px;
-            font-size:42px;
-            font-weight:900;
-        }
-
-        .hero-left p{
-            margin-bottom:20px;
-            line-height:1.6;
-            font-size:16px;
-        }
-
-        .hero-actions{
-            display:flex;
-            gap:12px;
-            flex-wrap:wrap;
-        }
-
-        .hero-right{
-            width:310px;
-            background:rgba(255,255,255,0.12);
-            padding:18px;
-            border-radius:12px;
-            text-align:center;
-            box-shadow:0 10px 28px rgba(0,0,0,0.25);
-        }
-
-        .hero-right img{
-            width:100%;
-            border-radius:10px;
-        }
-
-        /* ============================== */
-        /* FACILITIES */
-        /* ============================== */
-
-        section.category{
-            padding:40px 6%;
-            display:grid;
-            grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
-            gap:16px;
-        }
-
-        .category .box{
-            background:white;
-            border-radius:12px;
-            padding:20px;
-            text-align:center;
-            box-shadow:0 6px 16px rgba(0,0,0,0.08);
-        }
-        .category .box img{
-            width:60px;
-            margin-bottom:10px;
-        }
-
-        /* ============================== */
-        /* FOOTER */
-        /* ============================== */
-
-        footer{
-            padding:40px 6%;
-            background:white;
-            margin-top:40px;
-        }
-        .footer-grid{
-            display:grid;
-            grid-template-columns:repeat(auto-fit, minmax(230px,1fr));
-            gap:20px;
-        }
-        footer a{
-            color:var(--muted);
-            font-weight:600;
-            text-decoration:none;
-            display:block;
-            margin:6px 0;
-        }
-        .footer-bottom{
-            margin-top:20px;
-            text-align:center;
-            font-size:14px;
-        }
-
-        /* ============================== */
-        /* MOBILE FIXES */
-        /* ============================== */
-
-        @media(max-width:768px){
-
-            header.header{
-                flex-direction:column;
-                text-align:center;
-                gap:10px;
-            }
-
-            .header-center h1{
-                font-size:22px;
-            }
-
-            #menu-btn{
-                display:block;
-                position:absolute;
-                right:16px;
-                top:14px;
-                color:white;
-            }
-
-            nav.navbar{
-                display:none;
-            }
-
-            nav.navbar ul{
-                flex-direction:column;
-                background:#022052;
-                padding:10px;
-                border-radius:10px;
-                margin-top:10px;
-            }
-
-            .header-right{
-                flex-wrap:wrap;
-                justify-content:center;
-                width:100%;
-            }
-
-            .hero{
-                flex-direction:column;
-                text-align:center;
-                padding-top:28px !important;
-            }
-
-            .hero-left h1{
-                font-size:30px;
-            }
-
-            .hero-right{
-                width:100%;
-            }
-        }
-
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VMM International School - Motihari</title>
+  <meta name="description" content="VMM International School, Motihari, Bihar. Admission Open for Nursery to Class XII. Smart Classes, Library, Computer Lab, Dance, Music & Playground.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+  <div class="wrap" role="document">
 
     <!-- HEADER -->
-    <header class="header">
-        <div class="header-left">
-            <img src="images/logo.png" alt="School Logo">
+    <header class="header" role="banner" aria-label="Site header">
+      <div class="logo" aria-hidden="false">
+        <img src="images/logo.png" alt="VMM International School logo">
+        <div class="brand">
+          <h1>VMM INTERNATIONAL SCHOOL</h1>
+          <p>Motihari, Bihar — Nursery to Class XII</p>
         </div>
+      </div>
 
-        <div class="header-center">
-            <h1>VMM INTERNATIONAL SCHOOL</h1>
-            <p>Motihari, Bihar — Nursery to Class XII</p>
-        </div>
+      <!-- desktop nav (hidden on mobile by CSS) -->
+      <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery1.html">Gallery</a>
+        <a href="ContactUs/contact.php">Contact</a>
+      </nav>
 
-        <div class="header-right">
+      <div class="header-actions" role="group" aria-label="Contact actions">
+        <a class="btn" href="tel:‪+919717027791‬"><i class="fas fa-phone-alt" aria-hidden="true"></i> <span class="visually-hidden">Call</span> Call</a>
+        <a class="btn map" href="https://maps.app.goo.gl/YQ7drw1g4xwhc6p99" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Location</a>
 
-            <nav class="navbar">
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="gallery1.html">GALLERY</a></li>
-                    <li><a href="ContactUs/contact.php">CONTACT</a></li>
-                </ul>
-            </nav>
-
-            <!-- FIXED CALL ICON -->
-            <a class="btn" href="tel:+919717027791">
-                <i class="fas fa-phone-alt"></i> Call
-            </a>
-
-            <a class="btn" href="https://maps.app.goo.gl/YQ7drw1g4xwhc6p99" target="_blank">
-                <i class="fas fa-map-marker-alt"></i> Location
-            </a>
-
-            <div id="menu-btn" class="fas fa-bars"></div>
-        </div>
+        <!-- mobile hamburger (use button for accessibility) -->
+        <button id="menu-btn" aria-expanded="false" aria-controls="mobile-menu" title="Open menu">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+          <span class="visually-hidden">Toggle menu</span>
+        </button>
+      </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero">
+    <!-- mobile menu panel (hidden by default) -->
+    <div id="mobile-menu" style="display:none; margin-top:10px;" aria-hidden="true">
+      <nav style="background: rgba(255,255,255,0.03); padding:10px; border-radius:10px; border:1px solid rgba(255,255,255,0.02);" aria-label="Mobile navigation">
+        <a class="footer-link" href="index.html">Home</a>
+        <a class="footer-link" href="about.html">About</a>
+        <a class="footer-link" href="gallery1.html">Gallery</a>
+        <a class="footer-link" href="ContactUs/contact.php">Contact</a>
+      </nav>
+    </div>
+
+    <!-- HERO SECTION -->
+    <main>
+      <section class="hero" role="region" aria-label="Admissions hero">
         <div class="hero-left">
-            <h1>Admission Open — Nursery to Class XII</h1>
-            <p>
-                Smart Classes • Library • Computer Lab • Dance • Music • Playground.  
-                Join VMM International School for a caring, high-quality English–medium education in Motihari.
-            </p>
+          <h1>Admission Open — Nursery to Class XII</h1>
+          <p> • Smart Classes • Library • Computer Lab • Dance • Music • Playground. Join VMM International School for a caring, high-quality English-medium education in Motihari.</p>
 
-            <div class="hero-actions">
-                <a class="btn" href="tel:+919717027791"><i class="fas fa-phone-alt"></i> Apply Now</a>
-                <a class="btn" href="https://wa.me/919717027791"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-            </div>
+          <div class="hero-actions">
+            <a class="apply" href="tel:‪+919717027791‬"><i class="fas fa-phone-alt" aria-hidden="true"></i> Apply Now</a>
+            <a class="wa" href="https://wa.me/919717027791" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+          </div>
         </div>
 
-        <div class="hero-right">
-            <img src="images/school-photo.jpg" alt="">
-            <h4>Visit Us</h4>
-            <p>Prajapati Chowk, Chhatauni — Motihari, Bihar 845401</p>
-        </div>
-    </section>
+        <aside class="hero-right" aria-label="Visit and images">
+          <div class="slider" id="slider" aria-hidden="false">
+            <div class="slide active" role="img" aria-label="School photo 1" aria-hidden="false" style="background-image:url('images/school-photo.jpg');"></div>
+            <div class="slide" role="img" aria-label="School photo 2" aria-hidden="true" style="background-image:url('images/school-photo2.jpg');"></div>
+            <div class="slide" role="img" aria-label="School photo 3" aria-hidden="true" style="background-image:url('images/school-photo3.jpg');"></div>
+          </div>
 
-    <!-- FACILITIES -->
-    <section class="category">
-        <div class="box"><img src="images/sports.png"><h3>Sports</h3></div>
-        <div class="box"><img src="images/library.png"><h3>Library</h3></div>
-        <div class="box"><img src="images/computer.png"><h3>Computer Lab</h3></div>
-        <div class="box"><img src="images/playground.png"><h3>Playground</h3></div>
-    </section>
+          <div class="slider-controls" aria-hidden="false">
+            <button id="prevBtn" aria-label="Previous image"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+            <button id="nextBtn" aria-label="Next image"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+          </div>
+
+          <div class="visit" role="note">
+            Visit Us<br>
+            <span style="font-weight:600; display:block; margin-top:8px;">Prajapati Chowk, Chhatauni — Motihari, Bihar 845401</span>
+          </div>
+        </aside>
+      </section>
+
+      <!-- FACILITIES -->
+      <section class="content-section" aria-label="Facilities">
+        <h2 style="margin:12px 0 4px 0;">Our Facilities</h2>
+        <div class="grid">
+          <div class="card">
+            <img src="images/sports.png" alt="Sports icon">
+            <h3>Sports</h3>
+            <p>Outdoor & indoor playgrounds, coaching & tournaments.</p>
+          </div>
+          <div class="card">
+            <img src="images/library.png" alt="Library icon">
+            <h3>Library</h3>
+            <p>Extensive collection and reading corners.</p>
+          </div>
+          <div class="card">
+            <img src="images/computer.png" alt="Computer lab icon">
+            <h3>Computer Lab</h3>
+            <p>Modern computers & digital learning resources.</p>
+          </div>
+          <div class="card">
+            <img src="images/music.png" alt="Music icon">
+            <h3>Music & Dance</h3>
+            <p>Cultural activities, instrumental & vocal classes.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="content-section" aria-label="Testimonials">
+        <h2 style="margin:18px 0 4px 0;">What Parents Say</h2>
+        <div class="grid">
+          <div class="card"><p>"VMM International School has transformed my child's future. The teachers are dedicated and the facilities are top-notch!"</p><small class="muted">— Mrs. Sharma</small></div>
+          <div class="card"><p>"Excellent English-medium education with a focus on holistic development. Highly recommend!"</p><small class="muted">— Mr. Gupta</small></div>
+          <div class="card"><p>"The playground and extracurricular activities keep my kids engaged and happy."</p><small class="muted">— Mrs. Patel</small></div>
+        </div>
+      </section>
+
+      <!-- NEWS -->
+      <section class="content-section" aria-label="News & Events">
+        <h2 style="margin:18px 0 4px 0;">Latest News & Events</h2>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <div class="card" style="flex:1; min-width:220px;">
+            <h4>Annual Sports Day</h4>
+            <p>Join us for an exciting day of sports — all students welcome.</p>
+          </div>
+          <div class="card" style="flex:1; min-width:220px;">
+            <h4>Admission Open 2025</h4>
+            <p>Enroll now for Nursery to Class XII. Limited seats.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Floating side buttons -->
+    <div class="float-col" aria-hidden="false">
+      <a href="tel:+919717027791" title="Call VMM" aria-label="Call VMM"><i class="fas fa-phone-alt" aria-hidden="true"></i> Call</a>
+      <a class="wa" href="https://wa.me/919717027791" target="_blank" rel="noopener noreferrer" title="WhatsApp VMM" aria-label="WhatsApp VMM"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+    </div>
 
     <!-- FOOTER -->
-    <footer>
-        <div class="footer-grid">
-            <div>
-                <h3>Explore</h3>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="gallery1.html">Gallery</a>
-                <a href="ContactUs/contact.php">Contact</a>
-            </div>
+    <footer class="site-footer" role="contentinfo" aria-label="Footer">
+      <div class="col">
+        <h4>VMM INTERNATIONAL SCHOOL</h4>
+        <div class="muted">Prajapati Chowk, Chhatauni — Motihari, Bihar 845401</div>
+        <div style="margin-top:8px;" class="muted"><strong>Phone:</strong> +91 97170 27791</div>
+      </div>
 
-            <div>
-                <h3>Location</h3>
-                <p>Prajapati Chowk, Chhatauni — Motihari, Bihar 845401</p>
-            </div>
+      <div class="col" style="flex:1;">
+        <h4>Quick Links</h4>
+        <a class="footer-link" href="index.html">Home</a>
+        <a class="footer-link" href="about.html">About</a>
+        <a class="footer-link" href="gallery1.html">Gallery</a>
+        <a class="footer-link" href="ContactUs/contact.php">Contact</a>
+      </div>
 
-            <div>
-                <h3>Contact</h3>
-                <p>Phone: +91 9717027791</p>
-                <p>Email: vmminternationalschool@gmail.com</p>
-            </div>
-        </div>
+      <div class="col">
+        <h4>Admission</h4>
+        <div class="muted">Apply for Nursery to Class XII. <br><a class="footer-link" href="tel:+919717027791" style="color:var(--accent); font-weight:900; margin-top:8px; display:inline-block;">Apply Now</a></div>
+      </div>
 
-        <div class="footer-bottom">
-            © VMM International School — All Rights Reserved
-        </div>
+      <div class="bottom">© 2025 VMM International School — All Rights Reserved</div>
     </footer>
 
+  </div>
+
+  <script>
+    // Mobile menu toggle (improved accessibility)
+    (function(){
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      function toggleMenu() {
+        const isHidden = mobileMenu.style.display === 'none' || mobileMenu.style.display === '';
+        mobileMenu.style.display = isHidden ? 'block' : 'none';
+        mobileMenu.setAttribute('aria-hidden', String(!isHidden));
+        menuBtn.setAttribute('aria-expanded', String(isHidden));
+      }
+
+      menuBtn.addEventListener('click', toggleMenu);
+      menuBtn.addEventListener('keydown', function(e){
+        if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMenu(); }
+      });
+    })();
+
+    // Simple slider logic with manual controls and aria updates
+    (function(){
+      const slides = Array.from(document.querySelectorAll('.slide'));
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      let idx = 0;
+      let timer = null;
+
+      function show(i){
+        slides.forEach((s,si)=>{
+          const active = si === i;
+          s.classList.toggle('active', active);
+          s.setAttribute('aria-hidden', String(!active));
+        });
+      }
+
+      function next(){
+        idx = (idx + 1) % slides.length;
+        show(idx);
+      }
+      function prev(){
+        idx = (idx - 1 + slides.length) % slides.length;
+        show(idx);
+      }
+
+      if(nextBtn) nextBtn.addEventListener('click', ()=>{ next(); resetTimer(); });
+      if(prevBtn) prevBtn.addEventListener('click', ()=>{ prev(); resetTimer(); });
+
+      function startTimer(){
+        timer = setInterval(next, 4200);
+      }
+      function resetTimer(){
+        clearInterval(timer);
+        startTimer();
+      }
+
+      // init
+      show(idx);
+      startTimer();
+    })();
+
+    // Smooth scroll for local anchor links (no-op if none)
+    (function(){
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function(e){
+          const targetSelector = this.getAttribute('href');
+          if (!targetSelector || targetSelector === '#') return;
+          const target = document.querySelector(targetSelector);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({behavior:'smooth'});
+          }
+        });
+      });
+    })();
+  </script>
+
+  <style>
+    /* Tiny helper for screen-reader-only text */
+    .visually-hidden {
+      position: absolute !important;
+      height: 1px; width: 1px;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px);
+      white-space: nowrap;
+    }
+  </style>
 </body>
 </html>
