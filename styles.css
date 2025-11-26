@@ -71,6 +71,33 @@ header.header{
 /* --------------------
    Header buttons
    -------------------- */
+   .hamb-left {
+  order: -1;                 /* sabse left chala jayega */
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-actions #menu-btn {
+  display: none;  /* old place par hide */
+}
+
+/* Mobile view me left wala hamburger show karo */
+@media (max-width: 768px) {
+  .hamb-left {
+    display: block;
+}
+}
+
 .header-actions {display:flex;gap:10px;align-items:center;}
 .btn{
   display:inline-flex;gap:8px;align-items:center;padding:10px 14px;
